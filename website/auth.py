@@ -18,6 +18,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
+                return redirect(url_for('views.home'))
             else:
                 flash('Incorrect password, try again.', category='error')
         else:
@@ -30,6 +31,8 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('auth.login'))
+
+
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():

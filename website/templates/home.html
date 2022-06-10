@@ -1,17 +1,37 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
 
+
 <div class="row">
   <div class="col-lg-4">
-    <div class="box-element product"></div>
+    <div class="box-element product">
+        <img class="thumbnail" src="/static/css/images/window.png">
+        <h6><strong>Window</strong></h6>
+        <hr>
+        <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+        <a class=" btn btn-outline-success" href="#">Options</a>
+        <h4 style="display: inline-block;float: right">$30</h4>
+    </div>
   </div>
-
   <div class="col-lg-4">
-    <div class="box-element product"></div>
+    <div class="box-element product">
+        <img class="thumbnail" src="/static/css/images/window.png">
+        <h6><strong>Window</strong></h6>
+        <hr>
+        <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+        <a class=" btn btn-outline-success" href="#">Options</a>
+        <h4 style="display: inline-block;float: right">$30</h4>
+    </div>
   </div>
-
   <div class="col-lg-4">
-    <div class="box-element product"></div>
+    <div class="box-element product">
+        <img class="thumbnail" src="{{url_for('static', filename='images/window.png')}}"> 
+        <h6><strong>Window</strong></h6>
+        <hr>
+        <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+        <a class=" btn btn-outline-success" href="#">Options</a>
+        <h4 style="display: inline-block;float: right">$30</h4>
+    </div>
   </div>
 </div>
 
